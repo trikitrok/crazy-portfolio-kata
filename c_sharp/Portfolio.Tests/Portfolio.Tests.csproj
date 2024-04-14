@@ -9,30 +9,30 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="ApprovalTests" Version="6.0.0" />
-      <PackageReference Include="coverlet.collector" Version="6.0.2">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
-      <PackageReference Include="coverlet.msbuild" Version="6.0.2">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
-      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
-      <PackageReference Include="NSubstitute" Version="5.1.0" />
-      <PackageReference Include="NUnit" Version="4.1.0" />
-      <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
-      <PackageReference Include="ReportGenerator" Version="5.2.4" />
+        <PackageReference Include="ApprovalTests" Version="6.0.0"/>
+        <PackageReference Include="coverlet.collector" Version="6.0.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="coverlet.msbuild" Version="6.0.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0"/>
+        <PackageReference Include="NSubstitute" Version="5.1.0"/>
+        <PackageReference Include="NUnit" Version="4.1.0"/>
+        <PackageReference Include="NUnit3TestAdapter" Version="4.5.0"/>
+        <PackageReference Include="ReportGenerator" Version="5.2.4"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Portfolio\Portfolio.csproj" />
+        <ProjectReference Include="..\Portfolio\Portfolio.csproj"/>
     </ItemGroup>
 
     <Target Name="Coverlet">
         <!-- set security on binaries-->
-        <Exec Command="dotnet test /p:CollectCoverage=true /p:CoverletOutput=coverage/data/coverage /p:CoverletOutputFormat=cobertura" />
-        <Exec Command="dotnet reportgenerator -reports:coverage/data/coverage.cobertura.xml -targetdir:coverage/report" />
+        <Exec Command="dotnet test /p:CollectCoverage=true /p:CoverletOutput=coverage/data/coverage /p:CoverletOutputFormat=cobertura"/>
+        <Exec Command="dotnet reportgenerator -reports:coverage/data/coverage.cobertura.xml -targetdir:coverage/report"/>
     </Target>
 
 </Project>

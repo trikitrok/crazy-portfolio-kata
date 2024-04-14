@@ -35,26 +35,28 @@ public abstract class Value
     }
 }
 
-public class MeasurableValue: Value
+public class MeasurableValue : Value
 {
     public MeasurableValue(float value) : base(value)
-    { }
-    
+    {
+    }
+
     public override string ToString()
     {
         return _value.ToString(CultureInfo.CurrentCulture);
     }
 }
 
-public class PricelessValue : Value 
+public class PricelessValue : Value
 {
     public PricelessValue() : base(float.PositiveInfinity)
-    { }
+    {
+    }
 }
 
-public class NoValue : Value 
+public class NoValue : Value
 {
     public NoValue() : base(0)
-    { }
+    {
+    }
 }
-
